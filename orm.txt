@@ -1,0 +1,6 @@
+>>> Product.objects.values_list('category',flat=True).distinct()
+<QuerySet ['sports', 'jwellery', 'food', 'electronics']>
+
+
+>>> Product.objects.filter(price__gt=1000,price__lt=10000).values_list('category',flat=True).distinct        
+<bound method QuerySet.distinct of <QuerySet ['jwellery', 'sports']>>
